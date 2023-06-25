@@ -64,7 +64,11 @@ INSTALLED_APPS = [
     'corsheaders',
     'djoser',
 
-    'users'
+    'users',
+    'event',
+    'team',
+    'coordinator',
+    'result',
 ]
 
 MIDDLEWARE = [
