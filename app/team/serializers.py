@@ -7,7 +7,8 @@ class TeamMemberSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         return TeamMember.objects.create(team_id=self.context['team_id'], **validated_data)
 
-    team = serializers.CharField(read_only=True)
+    team = serializers.CharField(
+        read_only=True)
 
     class Meta:
         model = TeamMember
