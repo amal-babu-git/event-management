@@ -14,4 +14,4 @@ class Coordinator(models.Model):
         return self.user.full_name
     
     def __str__(self):
-        return str(self.user.full_name)
+        return str(self.user.email)

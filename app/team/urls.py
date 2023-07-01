@@ -7,7 +7,7 @@ router.register('', viewset=TeamViewSet, basename='teams')
 
 # team member endpoint ,nested 
 team_router = routers.NestedDefaultRouter(
-    parent_router=router, parent_prefix='', lookup='teams')
+    parent_router=router, parent_prefix='', lookup='team')
 team_router.register(prefix='members', viewset=TeamMemberViewSet,
                      basename='team-members')
 
