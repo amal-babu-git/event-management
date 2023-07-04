@@ -1,7 +1,6 @@
 from django.db import models
 from django.conf import settings
 from event.models import Event
-from .validators import validate_team_size
 # Create your models here.
 
 
@@ -17,7 +16,7 @@ class Team(models.Model):
 
 
 class TeamMember(models.Model):
-    id = models.BigAutoField(validators=[validate_team_size])
+    # id = models.BigAutoField(validators=[validate_team_size])
     name = models.CharField(max_length=100, null=True, blank=True)
     team = models.ForeignKey(Team,
                              on_delete=models.CASCADE,
